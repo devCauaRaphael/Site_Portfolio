@@ -1,8 +1,29 @@
+body {
+  color: #f3f3f3;
+  background-color: #23253A;
+}
+
 #inicio div a {
-  background-color: #005e23;
+  background-color: #fc4c51;
   padding: 2vh;
   color: #f3f3f3;
 }
 #inicio div a:hover {
-  background-color: #013220;
+  background-color: #Ff0000;
+}
+
+section#sobremim img {
+  border: 5px solid;
+  width: 20vw;
+  height: auto;
+}
+
+header, nav {
+  position: fixed;
+  width: 100%;
+  color: #f3f3f3;
+  border: 5px solid;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
