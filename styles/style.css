@@ -17,7 +17,6 @@ section#projetos h2, section#formacoes h2, section#sobremim h2 {
 }
 
 section#sobremim, section#formacoes {
-  padding: 0;
   font-size: 1.2rem;
 }
 section#sobremim img, section#formacoes img {
@@ -26,7 +25,7 @@ section#sobremim img, section#formacoes img {
 }
 
 section#sobremim img {
-  border: 5px solid;
+  border: 5px solid #f3f3f3;
 }
 
 header {
