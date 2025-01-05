@@ -24,21 +24,41 @@ body{
 
     }       
 }
-section#sobremim{
+
+section#projetos h2, section#formacoes h2, section#sobremim h2{
+
+  
+    text-decoration: overline;
+
+}
+
+section#sobremim, section#formacoes, {
 
     img{
-        border: 5px solid ;
+       
         width: 20vw;
-        height: auto;
+        height: auto;  
        
     }
+    padding: 0;
+    font-size: 1.2rem;
+  
 }
-header, nav{
+section#sobremim{
+    img{
+        border: 5px solid ;
+    }
+}
+
+
+header{
     position: fixed;
     width: 100%;
-    color: #f3f3f3;
-    border: 5px solid;
     z-index: 1;
     top: 0;
     left: 0;
+    background-color: #141626;    
+}
+footer{
+  background-color: #141626;
 }
