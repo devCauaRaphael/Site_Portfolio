@@ -1,0 +1,20 @@
+$fundo: #005e23;
+$tamanho: 2vh;
+$corLetraBaixar: #f3f3f3;
+$hoverBaixar: #013220;
+
+#inicio{    
+    div{
+
+        a{
+            background-color: $fundo;
+            padding: $tamanho;
+            color: $corLetraBaixar;
+        }
+
+    }
+    div a:hover{
+        background-color: $hoverBaixar;
+
+    }       
+}

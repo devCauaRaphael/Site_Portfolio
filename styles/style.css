@@ -1,4 +1,8 @@
 #inicio div a {
-  background-color: green;
+  background-color: #005e23;
   padding: 2vh;
+  color: #f3f3f3;
+}
+#inicio div a:hover {
+  background-color: #013220;
 }/*# sourceMappingURL=style.css.map */
