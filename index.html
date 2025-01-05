@@ -160,70 +160,149 @@
                 </div>
             </div>
           </section>
-        <!-- Seção Formações -->
-        <section id="formacoes" class="py-5">
-            <div class="container">
-              <h2 class="text-center">Formações</h2>
-              <div class="row">
-                <!-- Coluna Esquerda -->
-                <div class="col-md-6">
-                  <div class="formacao py-3">
-                    <img src="img/logoBG.png" alt="Formação Técnica" class="img-fluid">
-                    <h4>Técnico em Desenvolvimento de Sistemas</h4>
-                    <p>Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com React, Asp.Net e JavaScript. Foco em .NET e C#.</p>
-                    <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-danger">Saiba Mais</a>
-                  </div>
-                  <div class="formacao py-3">
-                    <img src="img/logoSENAI.png" alt="Formação Técnica" class="img-fluid">
-                    <h4>Pacote Office</h4>
-                    <p>Aprendizado de Word, Excel e PowerPoint</p>
-                    <a href="https://sp.senai.br/cursos/cursos-livres/tecnologia-da-informacao-e-informatica?pag=1" target="_blank" class="btn btn-danger">Saiba Mais</a>
-                  </div>
-                </div>
-                <!-- Coluna Direita -->
-                <div class="col-md-6">
-                  <div class="formacao py-3">
-                    <img src="img/logoOBC.png" alt="Formação Técnica" class="img-fluid">
-                    <h4>Especialização em Web</h4>
-                    <p>Tecnologias como React, NodeJS, PostgreeSQL, Javascript/Typescript e Next Avançado.</p>
-                    <a href="https://comunidade.onebitcode.com/courses" target="_blank" class="btn btn-danger">Saiba Mais</a>
-                  </div>
-                  <div class="formacao py-3">
-                    <img src="img/easyTechLogo.jpeg" alt="Formação Técnica" class="img-fluid">
-                    <h4>Informática e Gestão Empresarial</h4>
-                    <p>Curso de Informática (ferramentas como Word, Excel, PowerPoint, Adobe Photoshop e Illustrator) e Gestão empresarial (com foco em contabilidade e rotinas administrativas).</p>
-                    <a href="https://easytechprofissoes.com.br/" target="_blank" class="btn btn-danger">Saiba Mais</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> 
           
-          <section id="leitura">
-            <div class="container">
-              <h2 class="text-center">Leituras Técnicas</h2>
-              <div class="row">
-                <!-- Leitura 1 -->
-                <div class="col-md-6 leitura">
-                  <div class="py-3">
-                    <img src="img/CodigoLimpo.jpg" alt="Leitura Técnica" class="img-fluid">
-                    <h4>Código Limpo</h4>
-                    <p>Histórias reais, ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
-                    <a href="https://www.amazon.com.br/s?k=c%C3%B3digo+limpo&adgrpid=1143492976311206&hvadid=71468464232766&hvbmt=be&hvdev=c&hvlocphy=147082&hvnetw=o&hvqmt=e&hvtargid=kwd-71468985035257%3Aloc-20&hydadcr=25494_13512854&tag=msndesktopsta-20&ref=pd_sl_428woj1eiy_e" target="_blank" class="btn btn-danger">Comprar</a>
+         
+          <main>
+            <!-- Formação Section -->
+            <section id="formacoes" class="py-5">
+                <div class="container">
+                  <h2 class="text-center">Formações</h2>
+                  <!-- Carrossel para Mobile -->
+                  <div id="formacoesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="formacao py-3 text-center">
+                          <img src="img/logoBG.png" alt="Formação Técnica" class="img-fluid">
+                          <h4>Técnico em Desenvolvimento de Sistemas</h4>
+                          <p>Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com React, Asp.Net e JavaScript. Foco em .NET e C#.</p>
+                          <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="formacao py-3 text-center">
+                          <img src="img/logoSENAI.png" alt="Formação Técnica" class="img-fluid">
+                          <h4>Pacote Office</h4>
+                          <p>Aprendizado de Word, Excel e PowerPoint</p>
+                          <a href="https://sp.senai.br/cursos/cursos-livres/tecnologia-da-informacao-e-informatica?pag=1" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="formacao py-3 text-center">
+                          <img src="img/logoOBC.png" alt="Formação Técnica" class="img-fluid">
+                          <h4>Especialização em Web</h4>
+                          <p>Tecnologias como React, NodeJS, PostgreeSQL, Javascript/Typescript e Next Avançado.</p>
+                          <a href="https://comunidade.onebitcode.com/courses" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="formacao py-3 text-center">
+                          <img src="img/easyTechLogo.jpeg" alt="Formação Técnica" class="img-fluid">
+                          <h4>Informática e Gestão Empresarial</h4>
+                          <p>Curso de Informática (ferramentas como Word, Excel, PowerPoint, Adobe Photoshop e Illustrator) e Gestão empresarial (com foco em contabilidade e rotinas administrativas).</p>
+                          <a href="https://easytechprofissoes.com.br/" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Próximo</span>
+                    </button>
+                  </div>
+                  
+                  <!-- Grid para Desktop -->
+                  <div class="row d-none d-md-flex">
+                    <div class="col-md-6">
+                      <div class="formacao py-3">
+                        <img src="img/logoBG.png" alt="Formação Técnica" class="img-fluid">
+                        <h4>Técnico em Desenvolvimento de Sistemas</h4>
+                        <p>Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com React, Asp.Net e JavaScript. Foco em .NET e C#.</p>
+                        <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                      </div>
+                      <div class="formacao py-3">
+                        <img src="img/logoSENAI.png" alt="Formação Técnica" class="img-fluid">
+                        <h4>Pacote Office</h4>
+                        <p>Aprendizado de Word, Excel e PowerPoint</p>
+                        <a href="https://sp.senai.br/cursos/cursos-livres/tecnologia-da-informacao-e-informatica?pag=1" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="formacao py-3">
+                        <img src="img/logoOBC.png" alt="Formação Técnica" class="img-fluid">
+                        <h4>Especialização em Web</h4>
+                        <p>Tecnologias como React, NodeJS, PostgreeSQL, Javascript/Typescript e Next Avançado.</p>
+                        <a href="https://comunidade.onebitcode.com/courses" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                      </div>
+                      <div class="formacao py-3">
+                        <img src="img/easyTechLogo.jpeg" alt="Formação Técnica" class="img-fluid">
+                        <h4>Informática e Gestão Empresarial</h4>
+                        <p>Curso de Informática (ferramentas como Word, Excel, PowerPoint, Adobe Photoshop e Illustrator) e Gestão empresarial (com foco em contabilidade e rotinas administrativas).</p>
+                        <a href="https://easytechprofissoes.com.br/" target="_blank" class="btn btn-danger">Saiba Mais</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- Leitura 2 -->
-                <div class="col-md-6 leitura">
-                  <div class="py-3">
-                    <img src="img/ProgramadorPragmatico.png" alt="Leitura Técnica" class="img-fluid">
-                    <h4>Programador Pragmático</h4>
-                    <p>É um guia essencial para desenvolvedores de software, escrito por Andrew Hunt e David Thomas. O livro aborda princípios e práticas pragmáticas para melhorar a produtividade e a qualidade do código, como a filosofia pragmática, ferramentas básicas, flexibilidade e planejamento de projetos. É uma leitura obrigatória para quem deseja se tornar um programador mais eficiente e eficaz.</p>
-                    <a href="https://www.amazon.com.br/s?k=programador+pragmatico&crid=94O8P677O45V&sprefix=progra%2Caps%2C257&ref=nb_sb_ss_ts-doa-p_2_6">Comprar</a>
+              </section>
+            
+              <!-- Leitura Section -->
+              <section id="leitura" class="py-5">
+                <div class="container">
+                  <h2 class="text-center">Leituras Técnicas</h2>
+                  <!-- Carrossel para Mobile -->
+                  <div id="leituraCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="leitura py-3 text-center">
+                          <img src="img/CodigoLimpo.jpg" alt="Leitura Técnica" class="img-fluid">
+                          <h4>Código Limpo</h4>
+                          <p>Histórias reais, ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
+                          <a href="https://www.amazon.com.br/s?k=c%C3%B3digo+limpo" target="_blank" class="btn btn-danger">Comprar</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="leitura py-3 text-center">
+                          <img src="img/ProgramadorPragmatico.png" alt="Leitura Técnica" class="img-fluid">
+                          <h4>Programador Pragmático</h4>
+                          <p>Guia essencial para desenvolvedores de software, abordando produtividade e qualidade de código.</p>
+                          <a href="https://www.amazon.com.br/s?k=programador+pragmatico" target="_blank" class="btn btn-danger">Comprar</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#leituraCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#leituraCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Próximo</span>
+                    </button>
+                  </div>
+            
+                  <!-- Grid para Desktop -->
+                  <div class="row d-none d-md-flex">
+                    <div class="col-md-6 leitura">
+                      <div class="py-3">
+                        <img src="img/CodigoLimpo.jpg" alt="Leitura Técnica" class="img-fluid">
+                        <h4>Código Limpo</h4>
+                        <p>Histórias reais, ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
+                        <a href="https://www.amazon.com.br/s?k=c%C3%B3digo+limpo" target="_blank" class="btn btn-danger">Comprar</a>
+                      </div>
+                    </div>
+                    <div class="col-md-6 leitura">
+                      <div class="py-3">
+                        <img src="img/ProgramadorPragmatico.png" alt="Leitura Técnica" class="img-fluid">
+                        <h4>Programador Pragmático</h4>
+                        <p>Guia essencial para desenvolvedores de software, abordando produtividade e qualidade de código.</p>
+                        <a href="https://www.amazon.com.br/s?k=programador+pragmatico" target="_blank" class="btn btn-danger">Comprar</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
+              </section>
+          </main>
           
     </main>
 
