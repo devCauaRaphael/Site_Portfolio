@@ -18,7 +18,7 @@
 ├── files/      # Arquivos adicionais (PDFs, documentos)
 ├── img/        # Imagens do site
 └── style/
-    └── style.css  # Estilos personalizados
+    └── style.scss  # Estilos personalizados
 </pre>
 
 <h2>🌟 Objetivo</h2>
