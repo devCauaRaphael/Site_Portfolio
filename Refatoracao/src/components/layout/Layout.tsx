@@ -1,4 +1,4 @@
-import { FloatingSidebar } from "./FloatingSidebar"
+import { FloatingSidebar } from "./FloatingSideBar"
 import { Navbar } from "./Navbar"
 import MobileNav from "./MobileNav"
 
