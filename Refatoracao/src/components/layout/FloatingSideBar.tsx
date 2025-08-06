@@ -50,43 +50,43 @@ export function FloatingSidebar() {
       {/* Main Floating Sidebar */}
       <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden md:block">
         <Card className={`bg-gradient-card/95 backdrop-blur border-border shadow-card transition-all duration-300 ${
-          isExpanded ? 'w-52' : 'w-12'
+          isExpanded ? 'w-64' : 'w-14'
         }`}>
           {/* Toggle Button */}
-          <div className="p-2 border-b border-border/50">
+          <div className="p-3 border-b border-border/50">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleSidebar}
-              className="w-full h-8 hover:bg-primary/10 transition-colors"
+              className="w-full h-10 hover:bg-primary/10 transition-colors"
             >
               {isExpanded ? (
-                <X className="h-4 w-4 text-primary" />
+                <X className="h-5 w-5 text-primary" />
               ) : (
-                <Menu className="h-4 w-4 text-primary animate-pulse-glow" />
+                <Menu className="h-5 w-5 text-primary animate-pulse-glow" />
               )}
             </Button>
           </div>
 
           {/* Navigation Items */}
-          <div className="p-2 space-y-1">
+          <div className="p-3 space-y-1">
             {navigationItems.map((item) => {
               const active = isActive(item.url)
               return (
                 <NavLink
                   key={item.title}
                   to={item.url}
-                  className={`group flex items-center gap-3 p-2 rounded-lg transition-all duration-200 ${
+                  className={`group flex items-center gap-4 p-3 rounded-lg transition-all duration-200 ${
                     active
                       ? "bg-gradient-primary text-primary-foreground shadow-glow"
                       : "text-muted-foreground hover:text-primary hover:bg-secondary/30"
                   }`}
                 >
-                  <item.icon className={`h-4 w-4 flex-shrink-0 transition-transform ${
+                  <item.icon className={`h-5 w-5 flex-shrink-0 transition-transform ${
                     !isExpanded && active ? 'animate-float' : ''
                   } group-hover:scale-110`} />
                   {isExpanded && (
-                    <span className="text-sm font-medium animate-fade-in">
+                    <span className="text-base font-medium animate-fade-in">
                       {item.title}
                     </span>
                   )}
@@ -100,8 +100,8 @@ export function FloatingSidebar() {
               <Separator className="mx-2 bg-border/50" />
               
               {/* Social Links */}
-              <div className="p-2 space-y-1">
-                <div className="text-xs text-muted-foreground px-2 py-1 font-medium">
+              <div className="p-3 space-y-2">
+                <div className="text-sm text-muted-foreground px-3 py-1 font-medium">
                   REDES SOCIAIS
                 </div>
                 {socialItems.map((item) => (
@@ -110,9 +110,9 @@ export function FloatingSidebar() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-3 p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary/30 transition-all duration-200"
+                    className="group flex items-center gap-4 p-3 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary/30 transition-all duration-200"
                   >
-                    <item.icon className="h-4 w-4 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <item.icon className="h-5 w-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm animate-fade-in">{item.title}</span>
                   </a>
                 ))}
