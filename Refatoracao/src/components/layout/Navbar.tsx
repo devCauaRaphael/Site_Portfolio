@@ -60,7 +60,7 @@ export function Navbar() {
         {/* Brand */}
         <div className="flex items-center">
           <h1 className="font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">
-            DevPortfolio
+            Cauã Raphael
           </h1>
         </div>
 

@@ -7,7 +7,7 @@ const Index = () => {
     {
       icon: Database,
       title: "Banco de Dados",
-      description: "PostgreSQL, MongoDB, Redis",
+      description: "PostgreSQL, MongoDB, Redis, MySQL, SQL Server",
     },
     {
       icon: Server,
@@ -17,7 +17,7 @@ const Index = () => {
     {
       icon: Code,
       title: "Linguagens",
-      description: "Node.js, Python, Java, Go",
+      description: "Node.js, C#, Java, JavaScript, TypeScript",
     },
     {
       icon: Zap,

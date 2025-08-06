@@ -29,11 +29,11 @@ const navigationItems = [
 ]
 
 const socialItems = [
-  { title: "GitHub", url: "https://github.com", icon: Github, external: true },
-  { title: "LinkedIn", url: "https://linkedin.com", icon: Linkedin, external: true },
-  { title: "Instagram", url: "https://instagram.com", icon: Instagram, external: true },
-  { title: "WhatsApp", url: "https://wa.me/5511999999999", icon: MessageCircle, external: true },
-  { title: "TikTok", url: "https://tiktok.com/@seuusuario", icon: Music, external: true },
+  { title: "GitHub", url: "https://github.com/devCauaRaphael", icon: Github, external: true },
+  { title: "LinkedIn", url: "https://www.linkedin.com/in/devcauaraphael", icon: Linkedin, external: true },
+  { title: "Instagram", url: "https://www.instagram.com/cauawlrd?igsh=MWR2OG9tNDRwa2swYg==", icon: Instagram, external: true },
+  { title: "WhatsApp", url: "https://wa.link/q3n4uz", icon: MessageCircle, external: true },
+  { title: "TikTok", url: "https://www.tiktok.com/@dev.caua?_t=ZM-8yeZHtil9C4&_r=1", icon: Music, external: true },
 ]
 
 export function FloatingSidebar() {
@@ -143,7 +143,7 @@ export function FloatingSidebar() {
             className="w-12 h-12 rounded-full border-primary/30 text-primary hover:bg-primary/10"
             asChild
           >
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.link/q3n4uz" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-4 w-4" />
             </a>
           </Button>

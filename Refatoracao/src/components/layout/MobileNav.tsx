@@ -44,7 +44,7 @@ const MobileNav = () => {
               className="h-8 w-8 rounded-full hover:bg-primary/10"
               asChild
             >
-              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.link/q3n4uz" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4 text-green-500" />
               </a>
             </Button>
@@ -54,7 +54,7 @@ const MobileNav = () => {
               className="h-8 w-8 rounded-full hover:bg-primary/10"
               asChild
             >
-              <a href="https://tiktok.com/@seuusuario" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@dev.caua?_t=ZM-8yeZHtil9C4&_r=1" target="_blank" rel="noopener noreferrer">
                 <Music className="h-4 w-4 text-pink-500" />
               </a>
             </Button>

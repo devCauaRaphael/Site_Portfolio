@@ -49,14 +49,14 @@ const Contato = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "dev@exemplo.com",
-      href: "mailto:dev@exemplo.com"
+      value: "dev.cauaraphael@gmail.com",
+      href: "mailto:dev.cauaraphael@gmail.com"
     },
     {
       icon: Phone,
       label: "Telefone",
-      value: "+55 (11) 99999-9999",
-      href: "tel:+5511999999999"
+      value: "+55 (11) 969187486",
+      href: "tel:+5511969187486"
     },
     {
       icon: MapPin,
@@ -70,22 +70,22 @@ const Contato = () => {
     {
       icon: Github,
       label: "GitHub",
-      username: "@seuusuario",
-      href: "https://github.com/seuusuario",
+      username: "@devCauaRaphael",
+      href: "https://github.com/devCauaRaphael",
       description: "Veja meus repositórios e contribuições open source"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      username: "/in/seuusuario",
-      href: "https://linkedin.com/in/seuusuario",
+      username: "/in/devcauaraphael",
+      href: "https://www.linkedin.com/in/devcauaraphael",
       description: "Conecte-se comigo profissionalmente"
     },
     {
       icon: Instagram,
       label: "Instagram",
-      username: "@seuusuario",
-      href: "https://instagram.com/seuusuario",
+      username: "@cauawlrd",
+      href: "https://www.instagram.com/cauawlrd?igsh=MWR2OG9tNDRwa2swYg%3D%3D",
       description: "Acompanhe minha jornada e projetos pessoais"
     }
   ]
