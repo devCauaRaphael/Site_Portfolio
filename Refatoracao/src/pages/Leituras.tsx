@@ -15,64 +15,24 @@ const Leituras = () => {
 
   const completedBooks = [
     {
-      title: "Clean Architecture",
+      title: "Código Limpo",
       author: "Robert C. Martin",
       rating: 5,
-      category: "Arquitetura",
-      completedDate: "Dezembro 2023",
-      review: "Excelente livro sobre princípios de arquitetura limpa. Essencial para desenvolver sistemas sustentáveis.",
-      tags: ["SOLID", "Design Patterns", "Arquitetura"],
-      link: "https://amazon.com"
-    },
-    {
-      title: "Designing Data-Intensive Applications",
-      author: "Martin Kleppmann",
-      rating: 5,
-      category: "Banco de Dados",
-      completedDate: "Novembro 2023",
-      review: "O melhor livro sobre sistemas distribuídos e bancos de dados. Leitura obrigatória para backend developers.",
-      tags: ["Distributed Systems", "Databases", "Scalability"],
-      link: "https://amazon.com"
-    },
-    {
-      title: "The Pragmatic Programmer",
-      author: "David Thomas & Andrew Hunt",
-      rating: 4,
       category: "Desenvolvimento",
-      completedDate: "Outubro 2023",
-      review: "Conselhos práticos e atemporais para desenvolvedores. Ótimo para melhorar práticas de desenvolvimento.",
-      tags: ["Best Practices", "Programming", "Career"],
-      link: "https://amazon.com"
+      completedDate: "Novembro 2024",
+      review: "Princípios sólidos e boas práticas de codificação. Essencial para escrever código limpo, legível e sustentável.",
+      tags: ["Programação", "Boas Práticas", "Clean Code"],
+      link: "https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=4OM7PKWWDGM8&dib=eyJ2IjoiMSJ9.sBTjfwPCutWkDIRKC6d8WKlsWsI810ml2xB8vhI0eCz6mLPY6FLdVMPOSkOC05ACywSMRBpOlOeV6bagszJS0w3GBV55qWbHErNUAso7Nzt8Stx2GsodaFbPqzb9oPhIVKQEOrIv_BQc89znqzgrSrzHQ0GgIrc0pvahDNOcSsg7rcpvmDvIsnsVrT6hr4VBY1JcH8NHTmESS9XdUQRkW5GP3VjM9WAUGaLpEw8-LIe8ylMsLp-9ky9k0QMKjrr_q7rleazLJJ52Ek0p1q9BdfhzATITfiz0FlrcBONNCN8.GkysB16M17wV6R9zPrpEK-JHiA_72E9dn0qllvF5gC0&dib_tag=se&keywords=c%C3%B3digo+limpo&qid=1754585459&sprefix=c%C3%B3digo+limp%2Caps%2C362&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
     },
     {
-      title: "Site Reliability Engineering",
-      author: "Google",
-      rating: 4,
-      category: "DevOps",
-      completedDate: "Setembro 2023",
-      review: "Insights valiosos sobre como o Google mantém seus sistemas. Essencial para quem trabalha com alta escala.",
-      tags: ["SRE", "Monitoring", "Reliability"],
-      link: "https://amazon.com"
-    },
-    {
-      title: "Domain-Driven Design",
-      author: "Eric Evans",
-      rating: 4,
-      category: "Arquitetura",
-      completedDate: "Agosto 2023",
-      review: "Fundamental para entender como modelar domínios complexos. Mudou minha forma de pensar sobre design de software.",
-      tags: ["DDD", "Domain Modeling", "Architecture"],
-      link: "https://amazon.com"
-    },
-    {
-      title: "Kubernetes in Action",
-      author: "Marko Lukša",
+      title: "Programador Pragmático",
+      author: "David Thomas & Andrew Hunt",
       rating: 5,
-      category: "DevOps",
-      completedDate: "Julho 2023",
-      review: "Guia completo sobre Kubernetes. Excelente para quem quer dominar orquestração de containers.",
-      tags: ["Kubernetes", "Containers", "Orchestration"],
-      link: "https://amazon.com"
+      category: "Desenvolvimento",
+      completedDate: "Outubro 2024",
+      review: "Conselhos práticos e atemporais para desenvolvedores. Ótimo para melhorar práticas de desenvolvimento.",
+      tags: ["Boas práticas", "Programação", "Carreiras"],
+      link: "https://www.amazon.com.br/Programador-Pragm%C3%A1tico-Aprendiz-Mestre/dp/8577807002/ref=sr_1_1?crid=2S412J45ZE5AO&dib=eyJ2IjoiMSJ9.tWuQHI2wtDG34UNjg2w9QcP8VluTD1yGv_kOOi0BvTdmI2Oo0oP_g-3fg_DJucUr6yKhAuZowPVFsD-8oE-STViybJau8OaHq9eEK-HFjG389J1whJYTg_371cqIED3lGPun-AB8nfyl09m60hVvk_oRdFTCsD6T6glclAz38U8RQRSE8c4XFfgkI7movkiid1d9FQJcyg3QMvUpqJZzNKC5vCJgFd5dv9lM89vB6Mt7uQ-NLYR_sqYLOtlwyLDg_ilebinCI1bKUgxhZSV-J-gt-OTif6tlg4kwB7ovNQM.f4TCAS7SrXdHNGeEqZG8BM1OVA1xtp_YpbvNsHZ0W3w&dib_tag=se&keywords=programador+pragmatico&qid=1754585398&sprefix=programador+pr%2Caps%2C285&sr=8-1&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12"
     }
   ]
 
@@ -80,7 +40,7 @@ const Leituras = () => {
     {
       title: "Estruturas de Dados e Seus Algoritmos ",
       author: " MARKENZON",
-      category: "Estruturas de Dados",
+      category: "Estrutura de Dados",
       reason: "Interessado por otimizar algoritmos e entender melhor estruturas de dados fundamentais."
     },
     {
@@ -92,7 +52,7 @@ const Leituras = () => {
     {
       title: "Algoritmos e Estruturas de Dados em Linguagem C",
       author: "André Ricardo Backes",
-      category: "Estruturas de Dados",
+      category: "Estrutura de Dados",
       reason: "Aplicar conceitos de algoritmos e estruturas de dados em C para melhorar habilidades de programação."
     },
     {
@@ -117,11 +77,11 @@ const Leituras = () => {
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      "Arquitetura": "bg-blue-500/10 text-blue-400 border-blue-500/30",
-      "Banco de Dados": "bg-purple-500/10 text-purple-400 border-purple-500/30",
+      "Redes": "bg-blue-500/10 text-blue-400 border-blue-500/30",
+      "Estrutura de Dados": "bg-purple-500/10 text-purple-400 border-purple-500/30",
       "Desenvolvimento": "bg-green-500/10 text-green-400 border-green-500/30",
-      "DevOps": "bg-orange-500/10 text-orange-400 border-orange-500/30",
-      "Carreira": "bg-pink-500/10 text-pink-400 border-pink-500/30"
+      "Engenharia de Dados": "bg-orange-500/10 text-orange-400 border-orange-500/30",
+      "Arquitetura de Software": "bg-pink-500/10 text-pink-400 border-pink-500/30"
     }
     return colors[category] || "bg-gray-500/10 text-gray-400 border-gray-500/30"
   }
@@ -320,19 +280,19 @@ const Leituras = () => {
         <CardContent className="p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold mb-2 text-primary">6</div>
-              <div className="text-muted-foreground">Livros em 2023</div>
+              <div className="text-3xl font-bold mb-2 text-primary">2</div>
+              <div className="text-muted-foreground">Livros Lidos</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2 text-primary">1</div>
               <div className="text-muted-foreground">Lendo Agora</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2 text-primary">4.5</div>
+              <div className="text-3xl font-bold mb-2 text-primary">5</div>
               <div className="text-muted-foreground">Avaliação Média</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2 text-primary">3</div>
+              <div className="text-3xl font-bold mb-2 text-primary">6</div>
               <div className="text-muted-foreground">Na Lista de Desejos</div>
             </div>
           </div>
