@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button"
 
 const Leituras = () => {
   const currentReading = {
-    title: "Building Microservices",
-    author: "Sam Newman",
+    title: "Entendendo Algoritmos",
+    author: "Aditya Bhargava",
     progress: 65,
     category: "Arquitetura",
-    description: "Guia abrangente sobre design, desenvolvimento e implementação de arquiteturas de microserviços.",
-    startDate: "Janeiro 2024"
+    description: "Entendendo Algoritmos é um guia visual e acessível que explica conceitos de algoritmos e estruturas de dados de forma clara, prática e ilustrada.",
+    startDate: "Junho/2025"
   }
 
   const completedBooks = [
@@ -78,22 +78,40 @@ const Leituras = () => {
 
   const wishlist = [
     {
-      title: "Staff Engineer",
-      author: "Will Larson",
-      category: "Carreira",
-      reason: "Interessado em aprender sobre crescimento técnico para roles de senior engineer."
+      title: "Estruturas de Dados e Seus Algoritmos ",
+      author: " MARKENZON",
+      category: "Estruturas de Dados",
+      reason: "Interessado por otimizar algoritmos e entender melhor estruturas de dados fundamentais."
     },
     {
-      title: "Database Internals",
-      author: "Alex Petrov",
-      category: "Banco de Dados",
-      reason: "Aprofundar conhecimento sobre funcionamento interno de sistemas de banco de dados."
+      title: "Fundamentos de Engenharia de Dados: Projete e Construa Sistemas de Dados Robustos",
+      author: " Matt Housley",
+      category: "Engenharia de Dados",
+      reason: "Aprofundar conhecimentos em engenharia de dados e aprender a construir sistemas robustos."
     },
     {
-      title: "The Phoenix Project",
-      author: "Gene Kim",
-      category: "DevOps",
-      reason: "Aprender sobre transformação DevOps através de uma narrativa interessante."
+      title: "Algoritmos e Estruturas de Dados em Linguagem C",
+      author: "André Ricardo Backes",
+      category: "Estruturas de Dados",
+      reason: "Aplicar conceitos de algoritmos e estruturas de dados em C para melhorar habilidades de programação."
+    },
+    {
+      title: "Redes de Computadores",
+      author: " Andrew Tanenbaum",
+      category: "Redes",
+      reason: "Ampliar conhecimentos sobre redes de computadores e protocolos de comunicação."
+    },
+    {
+      title: "Comunicação de Dados e Redes de Computadores ",
+      author: "Behrouz A. Forouzan",
+      category: "Redes",
+      reason: "Compreender os fundamentos de comunicação de dados e redes de computadores para aprimorar habilidades em infraestrutura."
+    },
+    {
+      title: "Arquitetura Limpa: o Guia do Artesão Para Estrutura e Design de Software",
+      author: " Robert C. Martin",
+      category: "Arquitetura de Software",
+      reason: "Evoluir e compreender as variações de arquitetura de software e como aplicá-las em projetos reais."
     }
   ]
 

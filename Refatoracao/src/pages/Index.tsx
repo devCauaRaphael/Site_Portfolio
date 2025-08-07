@@ -22,7 +22,7 @@ const Index = () => {
     {
       icon: Zap,
       title: "Performance",
-      description: "Otimização, Cache, Monitoramento",
+      description: "Otimização, Cache, Monitoramento, BigO",
     },
   ]
 
