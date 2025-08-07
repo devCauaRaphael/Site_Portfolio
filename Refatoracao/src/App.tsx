@@ -7,7 +7,7 @@ import { Layout } from "@/components/layout/Layout";
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
 import Projetos from "./pages/Projetos";
-import Certificados from "./pages/Certificados";
+import Formacoes from "./pages/Certificados";
 import Leituras from "./pages/Leituras";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
@@ -25,17 +25,16 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/projetos" element={<Projetos />} />
-            <Route path="/certificados" element={<Certificados />} />
+            <Route path="/certificados" element={<Formacoes />} />
             <Route path="/leituras" element={<Leituras />} />
             <Route path="/contato" element={<Contato />} />
-         
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-  
 );
 
 export default App;

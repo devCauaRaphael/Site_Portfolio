@@ -1,28 +1,38 @@
-import { Code, Database, Server, Zap } from "lucide-react"
+import { Code, Database, Server, Zap, Monitor, Smartphone, Globe, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const Index = () => {
   const skills = [
     {
-      icon: Database,
-      title: "Banco de Dados",
-      description: "PostgreSQL, MongoDB, Redis, MySQL, SQL Server",
+      icon: Monitor,
+      title: "Frontend Moderno",
+      description: "React, TypeScript, Next.js, Tailwind CSS",
     },
     {
       icon: Server,
-      title: "APIs & Microserviços",
-      description: "REST, GraphQL, Docker, Kubernetes",
+      title: "Backend & APIs",
+      description: "JavaScript, Java, C#, Rest, GraphQL, .NET",
     },
     {
-      icon: Code,
-      title: "Linguagens",
-      description: "Node.js, C#, Java, JavaScript, TypeScript",
+      icon: Smartphone,
+      title: "Mobile & Responsivo",
+      description: "React Native, Progressive Web Apps",
     },
     {
-      icon: Zap,
-      title: "Performance",
-      description: "Otimização, Cache, Monitoramento, BigO",
+      icon: Globe,
+      title: "DevOps & Cloud",
+      description: "Docker, AWS, CI/CD, Kubernetes",
+    },
+    {
+      icon: Database,
+      title: "Banco de Dados",
+      description: "PostgreSQL, MongoDB, Redis, Prisma, MySQL, SQL Server",
+    },
+    {
+      icon: Layers,
+      title: "Arquitetura",
+      description: "Microserviços, Clean Code, Design Patterns",
     },
   ]
 
@@ -32,11 +42,11 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center bg-background">
         <div className="text-center max-w-4xl mx-auto px-6">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Desenvolvedor Back-End
+            Desenvolvedor Full-Stack
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Criando soluções robustas e escaláveis para transformar ideias em realidade digital. 
-            Especialista em arquiteturas modernas e performance otimizada.
+            Criando experiências digitais completas, do frontend ao backend. 
+            Especialista em React, Node.js e arquiteturas modernas escaláveis.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button 
@@ -66,11 +76,11 @@ const Index = () => {
               Especialidades
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Tecnologias e áreas de expertise que utilizo para desenvolver soluções de alta qualidade
+              Stack completo de tecnologias para desenvolvimento de aplicações web modernas
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <Card 
                 key={index} 

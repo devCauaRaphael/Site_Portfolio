@@ -23,7 +23,7 @@ const navigationItems = [
   { title: "Home", url: "/", icon: Home },
   { title: "Sobre", url: "/sobre", icon: User },
   { title: "Projetos", url: "/projetos", icon: FolderOpen },
-  { title: "Certificados", url: "/certificados", icon: Award },
+  { title: "Formações", url: "/certificados", icon: Award },
   { title: "Leituras", url: "/leituras", icon: BookOpen },
   { title: "Contato", url: "/contato", icon: Mail },
 ]

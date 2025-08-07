@@ -29,9 +29,10 @@ const Sobre = () => {
   ]
 
   const skills = [
-    "Node.js", "Python", "Java", "Go", "PostgreSQL", "MongoDB", 
-    "Redis", "Docker", "Kubernetes", "AWS", "GraphQL", "REST APIs",
-    "Microserviços", "CI/CD", "Git", "Linux"
+    "React", "TypeScript", "Node.js", "Next.js", "Tailwind CSS", "JavaScript",
+    "Python", "PostgreSQL", "MongoDB", "Prisma", "GraphQL", "REST APIs", 
+    "Docker", "AWS", "Git", "React Native", "Redux", "Zustand",
+    "Express.js", "NestJS", "Microserviços", "CI/CD", "Jest", "Cypress"
   ]
 
   return (
@@ -52,9 +53,9 @@ const Sobre = () => {
         </div>
         
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-          Sou um desenvolvedor backend apaixonado por criar soluções robustas e escaláveis. 
-          Com mais de 4 anos de experiência, tenho expertise em desenvolvimento de APIs, 
-          arquitetura de microserviços e otimização de performance.
+          Sou um desenvolvedor full-stack apaixonado por criar experiências digitais completas. 
+          Com mais de 4 anos de experiência, desenvolvo desde interfaces modernas em React 
+          até APIs robustas e arquiteturas escaláveis no backend.
         </p>
         
         {/* Download CV Button */}
@@ -65,7 +66,7 @@ const Sobre = () => {
               // Adicione aqui o link para o seu currículo
               const link = document.createElement('a');
               link.href = '/path-to-your-cv.pdf'; // Substitua pelo caminho real do seu CV
-              link.download = 'Curriculo-Backend-Developer.pdf';
+              link.download = 'Curriculo-FullStack-Developer.pdf';
               link.click();
             }}
           >
@@ -102,7 +103,7 @@ const Sobre = () => {
             <div className="flex items-center gap-3">
               <Trophy className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Foco:</span>
-              <span className="text-foreground">Backend Development</span>
+              <span className="text-foreground">Full-Stack Development</span>
             </div>
           </CardContent>
         </Card>
@@ -179,10 +180,9 @@ const Sobre = () => {
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Minha Missão</h3>
           <p className="text-lg leading-relaxed max-w-3xl mx-auto opacity-90">
-            "Desenvolver soluções backend que não apenas funcionam, mas que são eficientes, 
-            escaláveis e fáceis de manter. Acredito que código bem escrito é a base de qualquer 
-            aplicação de sucesso, e estou sempre buscando as melhores práticas e tecnologias 
-            para entregar valor real aos usuários finais."
+            "Criar experiências digitais completas que conectam usuários e tecnologia de forma 
+            intuitiva. Do design responsivo às APIs robustas, acredito que cada linha de código 
+            deve contribuir para soluções que realmente fazem a diferença na vida das pessoas."
           </p>
         </CardContent>
       </Card>
