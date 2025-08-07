@@ -11,50 +11,50 @@ const Formacoes = () => {
       issuer: "Senai",
       period: "2022 - 2023",
       level: "Curso Profissionalizante",
-      resume: "Formação completa em ciência da computação com foco em desenvolvimento de software, estruturas de dados, algoritmos e engenharia de software. O curso proporcionou uma base sólida em programação e metodologias ágeis.",
-      hardSkills: ["Java", "Python", "Algoritmos", "Estruturas de Dados", "Banco de Dados", "Engenharia de Software", "Programação Orientada a Objetos"],
+      resume: "Domínio das ferramentas Word, Excel e PowerPoint para criação de documentos, planilhas e apresentações profissionais.",
+      hardSkills: ["Word", "PowerPoint", "Excel"],
       status: "Concluído",
-      link: "https://unifesp.br"
+      link: "https://sp.senai.br/cursos/cursos-livres/tecnologia-da-informacao-e-informatica?pag=1"
     },
     {
-        title: "Pacote Office",
-      issuer: "Universidade Federal de São Paulo",
-      period: "2018 - 2022",
-      level: "Graduação",
-      resume: "Formação completa em ciência da computação com foco em desenvolvimento de software, estruturas de dados, algoritmos e engenharia de software. O curso proporcionou uma base sólida em programação e metodologias ágeis.",
-      hardSkills: ["Java", "Python", "Algoritmos", "Estruturas de Dados", "Banco de Dados", "Engenharia de Software", "Programação Orientada a Objetos"],
+      title: "Programação Web",
+      issuer: "OneBitCode",
+      period: "2024 - 2025",
+      level: "Especialização",
+      resume: "Formação prática em desenvolvimento web com foco em React, Node.js, PostgreSQL, JavaScript/TypeScript e Next.js avançado. O curso ofereceu uma base sólida em tecnologias modernas de front-end e back-end.",
+      hardSkills: ["Ruby", "NextJS", "React", "Tailwindcss", "TypeScript", "JavaScript", "Programação Orientada a Objetos", "NodeJS", "Git e Github"],
       status: "Concluído",
-      link: "https://unifesp.br"
+      link: "https://www.onebitcode.com/inscricao"
     },
     {
-        title: "Pacote Office",
-      issuer: "Universidade Federal de São Paulo",
-      period: "2018 - 2022",
-      level: "Graduação",
-      resume: "Formação completa em ciência da computação com foco em desenvolvimento de software, estruturas de dados, algoritmos e engenharia de software. O curso proporcionou uma base sólida em programação e metodologias ágeis.",
-      hardSkills: ["Java", "Python", "Algoritmos", "Estruturas de Dados", "Banco de Dados", "Engenharia de Software", "Programação Orientada a Objetos"],
+        title: "Rotinas Administrativas, Gestão de Pessoas e Pacote Office",
+      issuer: "EasyTech",
+      period: "2022 - 2023",
+      level: "Curso Profissionalizante",
+      resume: "Formação em Informática e Gestão Empresarial, com domínio de ferramentas como Word, Excel, PowerPoint, Photoshop e Illustrator, além de conhecimentos em contabilidade e rotinas administrativas.",
+      hardSkills: ["Adobe Illustrator", "Adobe Photoshop", "Canva", "PowerPoint", "Excel", "Contabilidade"],
       status: "Concluído",
-      link: "https://unifesp.br"
+      link: "https://easytechprofissoes.com.br/"
     },
     {
-        title: "Pacote Office",
-      issuer: "Universidade Federal de São Paulo",
-      period: "2018 - 2022",
-      level: "Graduação",
-      resume: "Formação completa em ciência da computação com foco em desenvolvimento de software, estruturas de dados, algoritmos e engenharia de software. O curso proporcionou uma base sólida em programação e metodologias ágeis.",
-      hardSkills: ["Java", "Python", "Algoritmos", "Estruturas de Dados", "Banco de Dados", "Engenharia de Software", "Programação Orientada a Objetos"],
+        title: "Java - Orientação a Objetos",
+      issuer: "CursoEmVideo",
+      period: "2024-2024",
+      level: "Curso Profissionalizante",
+      resume: "Formação em Java com foco em Programação Orientada a Objetos, abordando conceitos como classes, herança, polimorfismo e encapsulamento, com aplicação prática no desenvolvimento de sistemas robustos e reutilizáveis.",
+      hardSkills: ["Java", "Programação Orientada a Objetos"],
       status: "Concluído",
-      link: "https://unifesp.br"
+      link: "https://www.cursoemvideo.com/"
     },
     {
-        title: "Pacote Office",
-      issuer: "Universidade Federal de São Paulo",
-      period: "2018 - 2022",
-      level: "Graduação",
-      resume: "Formação completa em ciência da computação com foco em desenvolvimento de software, estruturas de dados, algoritmos e engenharia de software. O curso proporcionou uma base sólida em programação e metodologias ágeis.",
-      hardSkills: ["Java", "Python", "Algoritmos", "Estruturas de Dados", "Banco de Dados", "Engenharia de Software", "Programação Orientada a Objetos"],
+      title: "Cloud Fundamentals, Administration and Solution Architect",
+      issuer: "FIAP",
+      period: "2025 - 2025",
+      level: "Curso Profissionalizante",
+      resume: "Formação completa em computação em nuvem com foco em fundamentos, administração de ambientes e arquitetura de soluções. O curso abordou serviços como IaaS, PaaS e SaaS, além de práticas de automação, escalabilidade, segurança e design de soluções em ambientes multicloud.",
+      hardSkills: ["AWS", "Kubernets", "Azure", "Google Cloud Plataform", "Docker", "DevOps"  ],
       status: "Concluído",
-      link: "https://unifesp.br"
+      link: "https://on.fiap.com.br/"
     }
   ]
 
