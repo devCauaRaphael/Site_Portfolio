@@ -2,7 +2,8 @@ import { GraduationCap, Calendar, ExternalLink, CheckCircle, BookOpen } from "lu
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { time } from "console"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useState } from "react"
 
 const Formacoes = () => {
   const formacoes = [
@@ -60,41 +61,69 @@ const Formacoes = () => {
 
   const cursosEmAndamento = [
     {
-      title: "Mestrado em Inteligência Artificial",
-      instituicao: "Universidade de São Paulo",
-      periodo: "2024 - 2026",
-      nivel: "Mestrado",
-      resumo: "Programa de mestrado focado em inteligência artificial, deep learning e processamento de linguagem natural. Pesquisa aplicada em sistemas inteligentes.",
-      hardSkills: ["Inteligência Artificial", "Deep Learning", "NLP", "Computer Vision", "PyTorch", "Research"],
-      progresso: 25,
-      previsaoConclusao: "2026"
+      title: "Técnico em Desenvolvimento de Sistemas",
+      issuer: "ETEC. Basilides de Godoy",
+      period: "Junho/2024 - Dezembro/2025",
+      level: "Curso Técnico",
+      resume: "Formação em desenvolvimento de sistemas com foco em desenvolvimento full-stack e práticas de DevOps",
+      hardSkills: ["Kotlin", "Dart", "Flutter", "MySQL", "MongoDB", "SQL Server", ".NET", "AspNET", "JavaScript", "HTML", "CSS", "C#", "Kanban", "Scrum", "Git", "GitHub", "APIs"],
+      progress: 70,
+      previsaoConclusao: "2025"
     },
     {
-      title: "Advanced Cloud Architecture",
-      instituicao: "Google Cloud Platform",
-      periodo: "2024",
-      nivel: "Certificação",
-      resumo: "Curso avançado em arquitetura de nuvem focado em soluções enterprise, otimização de custos e governance em ambientes multi-cloud.",
-      hardSkills: ["GCP", "Multi-cloud", "Terraform", "Cloud Security", "Cost Optimization", "Enterprise Architecture"],
-      progresso: 60,
-      previsaoConclusao: "2024"
+      title: "DevOps e Agile Culture",
+      issuer: "FIAP",
+      period: "2025 - 2025",
+      level: "Curso Profissionalizante",
+      resume: "Formação em DevOps e Cultura Ágil, abordando integração contínua, entrega contínua, automação de processos e colaboração entre equipes. O curso explorou metodologias ágeis, ferramentas de gerenciamento e práticas para aumentar a eficiência e a qualidade no desenvolvimento de software.",
+      hardSkills: ["CI", "CD", "Scrum", "Kanban", "Docker", "Git", "Github"],
+      progress: 25,
+      previsaoConclusao: "2025"
     },
     {
-      title: "Blockchain Development Bootcamp",
-      instituicao: "ConsenSys Academy",
-      periodo: "2024",
-      nivel: "Curso Profissionalizante",
-      resumo: "Bootcamp intensivo em desenvolvimento blockchain, smart contracts e aplicações descentralizadas (DApps) no ecossistema Ethereum.",
-      hardSkills: ["Blockchain", "Solidity", "Web3", "Smart Contracts", "DApps", "Ethereum", "Truffle"],
-      progresso: 40,
-      previsaoConclusao: "2024"
+      title: "Cybersecurity",
+      issuer: "FIAP",
+      period: "2025 - 2025",
+      level: "Curso Profissionalizante",
+      resume: "Formação em Cybersecurity com foco na proteção de sistemas, redes e dados contra ameaças digitais. O curso abordou fundamentos de segurança da informação, análise de vulnerabilidades, gestão de riscos, criptografia e implementação de medidas preventivas e reativas para garantir a integridade, confidencialidade e disponibilidade das informações.",
+      hardSkills: ["Pentest", "Criptografia", "Gestão de chaves", "Análise e Monitoramento"],
+      progress: 10,
+      previsaoConclusao: "2025"
     }
   ]
 
+   const proximosPassos = [
+    {
+      title: "Engenharia de Software",
+      issuer: "FIAP",
+      period: "2026 - 2030",
+      level: "Graduação",
+      resume: "Bacharelado em Engenharia de Software da FIAP é um curso moderno e inovador, ideal para formar engenheiros digitais completos, com perfil Full Stack e foco em DevSecOps e pensamento orientado por dados (Data-Driven Thinking",
+      hardSkills: ["IA generatova", "IaaS", "PaaS", "SaaS", "Python", "Java", "JavaScript", "C#", "Swift", "APIs", "TDD", "Quality Assunrance", "Scrum", "Kanban", "Git", "GitHub", "CI/CD", "Docker", "Kubernetes", "AWS", "Azure", "Google Cloud Plataform", "Arquitetura de Software", "Microserviços", "Serverless", "Big Data", "Automação"]
+    },
+    {
+     title: "Foundational C# Certification",
+      issuer: "Microsoft",
+      period: "Planejado para 2026",
+      level: "Certificação",
+      resume: "A Foundational C# Certification valida conhecimentos básicos e essenciais da linguagem C#, incluindo programação orientada a objetos, estruturas de controle, manipulação de dados e tratamento de exceções. Ideal para quem deseja comprovar habilidades fundamentais para desenvolver aplicações com C# na plataforma .NET.",
+      hardSkills: ["C#", ".NET", "Orientação a Objetos"]
+    },
+    {
+      title: "Engenharia de Software",
+      issuer: "FIAP",
+      period: "Planejado para 2025",
+      level: "Certificação",
+      resume: "Preparação para certificação CKA para consolidar orquestração de contêineres em produção.",
+      hardSkills: ["Kubernetes", "Containers", "Networking", "Observability"]
+    }
+  ]
+
+
   const getNivelColor = (nivel: string) => {
     const colors: { [key: string]: string } = {
-      "Graduação": "bg-blue-500/10 text-blue-400 border-blue-500/30",
-      "Pós-graduação": "bg-purple-500/10 text-purple-400 border-purple-500/30",
+      "Certificação": "bg-blue-500/10 text-blue-400 border-blue-500/30",
+      "Bacharelado": "bg-purple-500/10 text-purple-400 border-purple-500/30",
       "Curso Técnico": "bg-green-500/10 text-green-400 border-green-500/30",
       "Especialização": "bg-orange-500/10 text-orange-400 border-orange-500/30",
       "Curso Profissionalizante": "bg-cyan-500/10 text-cyan-400 border-cyan-500/30"
@@ -102,9 +131,64 @@ const Formacoes = () => {
     return colors[nivel] || "bg-gray-500/10 text-gray-400 border-gray-500/30"
   }
 
+  const HardSkillsList = ({ skills }: { skills: string[] }) => {
+    const [expanded, setExpanded] = useState(false)
+    const total = skills.length
+    const visible = expanded ? skills : skills.slice(0, 3)
+
+    return (
+      <div className="space-y-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {visible.map((skill, idx) => (
+            <Badge
+              key={idx}
+              variant="secondary"
+              className="bg-secondary/50 text-secondary-foreground text-xs"
+            >
+              {skill}
+            </Badge>
+          ))}
+          {total > 3 && (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="h-7 w-7 rounded-full border border-input text-muted-foreground"
+                  aria-label={expanded ? "Ocultar habilidades" : `Mostrar todas as ${total} habilidades`}
+                  onClick={() => setExpanded((v) => !v)}
+                >
+                  <span className="text-[11px] font-medium">{expanded ? "–" : `+${total}`}</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{expanded ? "Ocultar habilidades" : `Mostrar todas as ${total} habilidades`}</p>
+              </TooltipContent>
+            </Tooltip>
+          )}
+        </div>
+        {expanded && total > 3 && (
+          <div className="flex flex-wrap gap-2">
+            {skills.slice(3).map((skill, idx) => (
+              <Badge
+                key={`extra-${idx}`}
+                variant="secondary"
+                className="bg-secondary/50 text-secondary-foreground text-xs"
+              >
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
+
   return (
-    <div className="container mx-auto px-6 py-8 max-w-6xl">
-      {/* Header */}
+    <TooltipProvider>
+      <div className="container mx-auto px-6 py-8 max-w-6xl">
+        {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
           Formações
@@ -169,17 +253,7 @@ const Formacoes = () => {
                 {/* Hard Skills */}
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-foreground">Hard Skills Adquiridas</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {formacao.hardSkills.map((skill, skillIndex) => (
-                      <Badge 
-                        key={skillIndex} 
-                        variant="secondary"
-                        className="bg-secondary/50 text-secondary-foreground text-xs"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+                    <HardSkillsList skills={formacao.hardSkills} />
                 </div>
 
                 {/* Link */}
@@ -219,65 +293,88 @@ const Formacoes = () => {
                   </div>
                   <Badge 
                     variant="outline" 
-                    className={getNivelColor(curso.nivel)}
+                    className={getNivelColor(curso.level)}
                   >
-                    {curso.nivel}
+                    {curso.level}
                   </Badge>
                 </div>
                 <CardTitle className="text-foreground text-lg">{curso.title}</CardTitle>
                 <CardDescription className="text-primary font-medium">
-                  {curso.instituicao}
+                  {curso.issuer}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground text-sm">{curso.periodo}</span>
+                  <span className="text-muted-foreground text-sm">{curso.period}</span>
                 </div>
 
                 {/* Resumo */}
                 <CardDescription className="text-muted-foreground leading-relaxed text-sm">
-                  {curso.resumo}
+                  {curso.resume}
                 </CardDescription>
 
                 {/* Hard Skills */}
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-foreground">Hard Skills</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {curso.hardSkills.slice(0, 4).map((skill, skillIndex) => (
-                      <Badge 
-                        key={skillIndex} 
-                        variant="secondary"
-                        className="bg-secondary/50 text-secondary-foreground text-xs"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                    {curso.hardSkills.length > 4 && (
-                      <Badge variant="secondary" className="bg-secondary/50 text-secondary-foreground text-xs">
-                        +{curso.hardSkills.length - 4}
-                      </Badge>
-                    )}
-                  </div>
+                    <HardSkillsList skills={curso.hardSkills} />
                 </div>
 
                 {/* Progresso */}
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Progresso</span>
-                    <span className="text-foreground font-medium">{curso.progresso}%</span>
+                    <span className="text-foreground font-medium">{curso.progress}%</span>
                   </div>
                   <div className="w-full bg-secondary rounded-full h-2">
                     <div 
                       className="bg-gradient-primary h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${curso.progresso}%` }}
+                      style={{ width: `${curso.progress}%` }}
                     />
                   </div>
                 </div>
                 
                 <div className="text-sm text-muted-foreground">
                   <span className="font-medium">Conclusão prevista:</span> {curso.previsaoConclusao}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Próximos Passos */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6 text-foreground">Próximos Passos</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {proximosPassos.map((item, index) => (
+            <Card key={index} className="bg-gradient-card border-border">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
+                    <BookOpen className="h-4 w-4 text-primary-foreground" />
+                  </div>
+                  <Badge variant="outline" className={getNivelColor(item.level)}>
+                    {item.level}
+                  </Badge>
+                </div>
+                <CardTitle className="text-foreground text-lg">{item.title}</CardTitle>
+                <CardDescription className="text-primary font-medium">
+                  {item.issuer}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground text-sm">{item.period}</span>
+                </div>
+                <CardDescription className="text-muted-foreground leading-relaxed text-sm">
+                  {item.resume}
+                </CardDescription>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-foreground">Foco de Hard Skills</h4>
+                  <HardSkillsList skills={item.hardSkills} />
                 </div>
               </CardContent>
             </Card>
@@ -305,6 +402,8 @@ const Formacoes = () => {
         </CardContent>
       </Card>
     </div>
+  )
+   </TooltipProvider>
   )
 }
 
