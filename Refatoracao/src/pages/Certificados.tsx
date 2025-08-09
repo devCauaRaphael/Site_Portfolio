@@ -110,12 +110,12 @@ const Formacoes = () => {
       hardSkills: ["C#", ".NET", "Orientação a Objetos"]
     },
     {
-      title: "Engenharia de Software",
+      title: "Inteligência Artificial e Computacional",
       issuer: "FIAP",
       period: "Planejado para 2025",
-      level: "Certificação",
-      resume: "Preparação para certificação CKA para consolidar orquestração de contêineres em produção.",
-      hardSkills: ["Kubernetes", "Containers", "Networking", "Observability"]
+      level: "Curso Profissionalizante",
+      resume: "Formação em Inteligência Artificial e Computacional com foco no desenvolvimento de soluções baseadas em aprendizado de máquina, visão computacional, processamento de linguagem natural e tomada de decisão autônoma. O curso abordou conceitos fundamentais, técnicas de modelagem e uso de bibliotecas e frameworks para implementação de modelos inteligentes aplicados a diversos contextos.",
+      hardSkills: ["NLP", "Redes Neurais Artificiais", "Machine Learning"]
     }
   ]
 
