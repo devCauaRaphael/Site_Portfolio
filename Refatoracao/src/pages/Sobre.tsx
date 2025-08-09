@@ -8,33 +8,18 @@ import curriculo from "@/assets/pdf/CauaCurriculoDev.pdf"
 const Sobre = () => {
   const experience = [
     {
-      title: "Senior Backend Developer",
-      company: "TechCorp Solutions",
-      period: "2022 - Presente",
-      description: "Lidero equipe de desenvolvimento backend, implementando microserviços e otimizando performance de APIs.",
-      technologies: ["Node.js", "PostgreSQL", "Docker", "AWS"]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2022",
-      description: "Desenvolvimento de aplicações web completas, desde o backend até o frontend, com foco em escalabilidade.",
-      technologies: ["Python", "Django", "React", "MongoDB"]
-    },
-    {
-      title: "Backend Developer Jr",
-      company: "WebDev Agency",
-      period: "2019 - 2020",
-      description: "Desenvolvimento de APIs REST e integração com sistemas terceiros para clientes diversos.",
-      technologies: ["Java", "Spring Boot", "MySQL", "Redis"]
+      title: "Desenvolvedor Autônomo Full-Stack",
+      period: "2024 - Presente",
+      description: "Transformo ideias em soluções digitais completas, desde interfaces modernas até APIs robustas.",
+      technologies: ["Node.js", "PostgreSQL", "Docker", "AWS", "GCP", "Azure", "React", "MongoDB", "MySQL", "C#", ".NET", "GraphQL", "Restful", "Github", "TypeScript"]
     }
   ]
 
   const skills = [
     "React", "TypeScript", "Node.js", "Next.js", "Tailwind CSS", "JavaScript",
-    "Python", "PostgreSQL", "MongoDB", "Prisma", "GraphQL", "REST APIs", 
-    "Docker", "AWS", "Git", "React Native", "Redux", "Zustand",
-    "Express.js", "NestJS", "Microserviços", "CI/CD", "Jest", "Cypress"
+    "PostgreSQL", "MongoDB", "Prisma", "GraphQL", "REST APIs",
+    "Docker", "AWS", "Git", "MySQL", "Express.js", "NextJS", "Microserviços", "CI/CD", "Github",
+    "Dart", "Flutter", "Kotlin", "Java", "C#", ".NET", "Scrum", "Kanban"
   ]
 
   return (
@@ -56,10 +41,7 @@ const Sobre = () => {
     </div>
         
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-          Sou um desenvolvedor full-stack apaixonado por criar experiências digitais completas. 
-          Com mais de 4 anos de experiência, desenvolvo desde interfaces modernas em React 
-          até APIs robustas e arquiteturas escaláveis no backend.
-        </p>
+Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atualmente curso Desenvolvimento de Sistemas na ETEC, com foco em web e backend. Sou apaixonado por tecnologia e adoro enfrentar desafios, sempre buscando aprender e crescer na área. Fora da programação, curto futebol, música e a cultura urbana que me inspiram no dia a dia.        </p>
         
         {/* Download CV Button */}
         <div className="mt-6">
@@ -147,9 +129,6 @@ const Sobre = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
                     <CardTitle className="text-foreground">{exp.title}</CardTitle>
-                    <CardDescription className="text-primary font-medium">
-                      {exp.company}
-                    </CardDescription>
                   </div>
                   <Badge variant="outline" className="self-start border-primary/30 text-primary">
                     {exp.period}
