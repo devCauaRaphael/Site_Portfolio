@@ -2,6 +2,8 @@ import { Calendar, MapPin, Code, Trophy } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import imagemProfile from "@/assets/image/imagemProfi.jpg"
+import curriculo from "@/assets/pdf/CauaCurriculoDev.pdf"
 
 const Sobre = () => {
   const experience = [
@@ -42,15 +44,16 @@ const Sobre = () => {
         <h1 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
           Sobre Mim
         </h1>
-        
         {/* Profile Photo Container */}
-        <div className="mb-6 flex justify-center">
-          <div className="w-48 h-48 rounded-full bg-gradient-card border-2 border-primary/20 flex items-center justify-center overflow-hidden">
-            <div className="text-center text-muted-foreground">
-              <span className="text-sm">Adicione sua foto aqui</span>
-            </div>
-          </div>
-        </div>
+      <div className="mb-6 flex justify-center">
+        <div className="w-48 h-48 rounded-full bg-gradient-card border-2 border-primary/20 justify-center overflow-hidden">
+       <img
+         src={imagemProfile}
+          alt="Foto de perfil"
+          className="w-full h-full rounded-full object-cover object-top"
+      />
+      </div>
+    </div>
         
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
           Sou um desenvolvedor full-stack apaixonado por criar experiências digitais completas. 
@@ -63,9 +66,8 @@ const Sobre = () => {
           <Button 
             className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
             onClick={() => {
-              // Adicione aqui o link para o seu currículo
               const link = document.createElement('a');
-              link.href = '/path-to-your-cv.pdf'; // Substitua pelo caminho real do seu CV
+              link.href = curriculo; 
               link.download = 'Curriculo-FullStack-Developer.pdf';
               link.click();
             }}
