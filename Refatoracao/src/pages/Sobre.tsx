@@ -72,7 +72,7 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
             <div className="flex items-center gap-3">
               <Calendar className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Nascimento:</span>
-              <span className="text-foreground">15/03/1995</span>
+              <span className="text-foreground">19/06/2007</span>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -82,7 +82,7 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
             <div className="flex items-center gap-3">
               <Code className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Experiência:</span>
-              <span className="text-foreground">4+ anos</span>
+              <span className="text-foreground">1+ ano</span>
             </div>
             <div className="flex items-center gap-3">
               <Trophy className="h-4 w-4 text-muted-foreground" />
