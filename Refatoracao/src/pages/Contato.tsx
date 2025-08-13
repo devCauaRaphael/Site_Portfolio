@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
+import emailjs from "@emailjs/browser"
+
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const templateId = import.meta.env.VITE_TEMPLATE_ID
+
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -22,8 +28,8 @@ const Contato = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
-    // Simple validation
+
+    // Validação básica
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
         title: "Erro",
@@ -33,16 +39,43 @@ const Contato = () => {
       return
     }
 
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Obrigado pelo contato. Retornarei em breve!",
+    // Validação de email
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      toast({
+        title: "Erro",
+        description: "Por favor, insira um email válido.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    // Envio para o EmailJS com os nomes corretos do template
+    emailjs.send(
+      serviceId,
+      templateId,
+      {
+        name: formData.name,
+        email: formData.email,
+        title: formData.subject, // 'subject' do form vira 'title' no template
+        message: formData.message,
+        time: new Date().toLocaleString("pt-BR")
+      },
+      publicKey
+    )
+    .then(() => {
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Obrigado pelo contato. Retornarei em breve!",
+      })
+      setFormData({ name: "", email: "", subject: "", message: "" })
     })
-    
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    .catch(() => {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente mais tarde.",
+        variant: "destructive",
+      })
+    })
   }
 
   const contactInfo = [
@@ -92,7 +125,6 @@ const Contato = () => {
 
   return (
     <div className="container mx-auto px-6 py-8 max-w-6xl">
-      {/* Header */}
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
           Entre em Contato
@@ -104,7 +136,7 @@ const Contato = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Form */}
+        {/* Formulário */}
         <div>
           <Card className="bg-gradient-card border-border">
             <CardHeader>
@@ -113,88 +145,36 @@ const Contato = () => {
                 Envie uma Mensagem
               </CardTitle>
             </CardHeader>
-            
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-foreground">
-                      Nome *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Seu nome completo"
-                      className="bg-secondary/50 border-border focus:border-primary"
-                      required
-                    />
+                    <label htmlFor="name" className="text-sm font-medium text-foreground">Nome *</label>
+                    <Input id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Seu nome completo" required />
                   </div>
-                  
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-foreground">
-                      Email *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="seu.email@exemplo.com"
-                      className="bg-secondary/50 border-border focus:border-primary"
-                      required
-                    />
+                    <label htmlFor="email" className="text-sm font-medium text-foreground">Email *</label>
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder="seu.email@exemplo.com" required />
                   </div>
                 </div>
-                
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-foreground">
-                    Assunto *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    placeholder="Sobre o que você gostaria de conversar?"
-                    className="bg-secondary/50 border-border focus:border-primary"
-                    required
-                  />
+                  <label htmlFor="subject" className="text-sm font-medium text-foreground">Assunto *</label>
+                  <Input id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Sobre o que você gostaria de conversar?" required />
                 </div>
-                
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-foreground">
-                    Mensagem *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Descreva como posso ajudá-lo ou sobre o que gostaria de conversar..."
-                    className="bg-secondary/50 border-border focus:border-primary min-h-[120px] resize-none"
-                    required
-                  />
+                  <label htmlFor="message" className="text-sm font-medium text-foreground">Mensagem *</label>
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleInputChange} placeholder="Descreva como posso ajudá-lo..." required />
                 </div>
-                
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
-                  size="lg"
-                >
-                  <Send className="mr-2 h-5 w-5" />
-                  Enviar Mensagem
+                <Button type="submit" className="w-full bg-gradient-primary text-primary-foreground" size="lg">
+                  <Send className="mr-2 h-5 w-5" /> Enviar Mensagem
                 </Button>
               </form>
             </CardContent>
           </Card>
         </div>
 
-        {/* Contact Info & Social */}
+        {/* Informações */}
         <div className="space-y-8">
-          {/* Contact Information */}
           <Card className="bg-gradient-card border-border">
             <CardHeader>
               <CardTitle className="text-foreground">Informações de Contato</CardTitle>
@@ -208,12 +188,7 @@ const Contato = () => {
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.href ? (
-                      <a 
-                        href={info.href}
-                        className="text-foreground hover:text-primary transition-colors"
-                      >
-                        {info.value}
-                      </a>
+                      <a href={info.href} className="text-foreground hover:text-primary">{info.value}</a>
                     ) : (
                       <div className="text-foreground">{info.value}</div>
                     )}
@@ -223,7 +198,6 @@ const Contato = () => {
             </CardContent>
           </Card>
 
-          {/* Social Links */}
           <Card className="bg-gradient-card border-border">
             <CardHeader>
               <CardTitle className="text-foreground">Redes Sociais</CardTitle>
@@ -237,31 +211,22 @@ const Contato = () => {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-medium text-foreground">{social.label}</span>
-                      <a 
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary/80 transition-colors"
-                      >
+                      <a href={social.href} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
                         {social.username}
                       </a>
                     </div>
-                    <div className="text-sm text-muted-foreground mt-1">
-                      {social.description}
-                    </div>
+                    <div className="text-sm text-muted-foreground mt-1">{social.description}</div>
                   </div>
                 </div>
               ))}
             </CardContent>
           </Card>
 
-          {/* Quick Response Note */}
           <Card className="bg-gradient-primary border-0 text-primary-foreground">
             <CardContent className="p-6 text-center">
               <h3 className="text-lg font-semibold mb-2">Resposta Rápida</h3>
               <p className="text-primary-foreground/90">
-                Normalmente respondo em até 24 horas. Para projetos urgentes, 
-                entre em contato via telefone ou LinkedIn.
+                Normalmente respondo em até 24 horas. Para projetos urgentes, entre em contato via telefone ou LinkedIn.
               </p>
             </CardContent>
           </Card>
