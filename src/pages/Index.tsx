@@ -1,6 +1,8 @@
 import { Code, Database, Server, Zap, Monitor, Smartphone, Globe, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Link } from "react-router-dom";
+
 
 const Index = () => {
   const skills = [
@@ -46,23 +48,22 @@ const Index = () => {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Criando experiências digitais completas, do frontend ao backend. 
-            Especialista em React, Node.js e arquiteturas modernas escaláveis.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 px-6"
-              asChild
-            >
-              <a href="/projetos">Ver Projetos</a>
+           <Button 
+          size="lg" 
+          className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 px-6"
+           asChild
+        >
+            <Link to="/projetos">Ver Projetos</Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-primary text-primary hover:bg-primary/10 px-6"
-              asChild
-            >
-              <a href="/contato">Entrar em Contato</a>
+          <Button 
+          size="lg" 
+          variant="outline" 
+          className="border-primary text-primary hover:bg-primary/10 px-6"
+            asChild
+            > 
+          <Link to="/contato">Entrar em Contato</Link>
             </Button>
           </div>
         </div>
@@ -114,12 +115,12 @@ const Index = () => {
             Vamos conversar sobre seu próximo projeto!
           </p>
           <Button 
-            size="lg" 
-            className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 px-6"
-            asChild
+          size="lg" 
+          className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 px-6"
+          asChild
           >
-            <a href="/contato">Entrar em Contato</a>
-          </Button>
+          <Link to="/contato">Entrar em Contato</Link>
+        </Button>
         </div>
       </section>
     </div>
