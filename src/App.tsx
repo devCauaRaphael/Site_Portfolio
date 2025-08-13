@@ -10,7 +10,7 @@ import Formacoes from "./pages/Certificados";
 import Leituras from "./pages/Leituras";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -19,20 +19,19 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/* basename garante que as rotas funcionem no GitHub Pages */}
-      <BrowserRouter basename="/Site_Portfolio">
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/projetos" element={<Projetos />} />
-            <Route path="/certificados" element={<Formacoes />} />
-            <Route path="/leituras" element={<Leituras />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="*" element={<Index />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+     <HashRouter>
+  <Layout>
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/projetos" element={<Projetos />} />
+      <Route path="/certificados" element={<Formacoes />} />
+      <Route path="/leituras" element={<Leituras />} />
+      <Route path="/contato" element={<Contato />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </Layout>
+</HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
