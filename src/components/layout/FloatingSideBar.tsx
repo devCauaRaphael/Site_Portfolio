@@ -18,6 +18,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { Link } from "react-router-dom";
+
 
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
@@ -125,17 +127,6 @@ export function FloatingSidebar() {
       {/* Floating Quick Actions (when collapsed) */}
       {!isExpanded && (
         <div className="fixed left-4 bottom-4 z-40 hidden md:flex flex-col gap-3">
-          {/* Quick Contact */}
-          <Button
-            size="sm"
-            className="w-12 h-12 rounded-full bg-gradient-primary text-primary-foreground shadow-glow hover:shadow-card animate-float"
-            asChild
-          >
-            <a href="/contato">
-              <Mail className="h-4 w-4" />
-            </a>
-          </Button>
-          
           {/* Quick WhatsApp */}
           <Button
             size="sm"
