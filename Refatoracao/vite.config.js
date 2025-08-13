@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: "/Site_Portfolio", 
+  base: "/Site_Portfolio/", 
   server: {
     host: "::",
     port: 8080,

@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/devCauaRaphael/Site_Portfolio",
   "name": "refatoracao",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +10,7 @@
   "build": "vite build",
   "dev": "vite"
   },
-  "homepage": "https://github.com/devCauaRaphael/Site_Portfolio",
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-dialog": "^1.1.14",
