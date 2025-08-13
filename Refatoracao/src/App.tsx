@@ -23,7 +23,7 @@ const App = () => (
       <HashRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/Site_Portfolio" element={<Index />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/certificados" element={<Formacoes />} />
