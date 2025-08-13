@@ -2,7 +2,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
@@ -11,6 +10,8 @@ import Formacoes from "./pages/Certificados";
 import Leituras from "./pages/Leituras";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <HashRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -28,11 +29,10 @@ const App = () => (
             <Route path="/certificados" element={<Formacoes />} />
             <Route path="/leituras" element={<Leituras />} />
             <Route path="/contato" element={<Contato />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
