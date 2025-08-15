@@ -3,7 +3,6 @@ import { Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Dialog,
   DialogContent,
@@ -13,12 +12,18 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { useToast } from "@/hooks/use-toast"
+import emailjs from "@emailjs/browser"
+
+const publicKey = import.meta.env.VITE_PUBLIC_KEY
+const serviceId = import.meta.env.VITE_SERVICE_ID
+const templateId = import.meta.env.VITE_TEMPLATE_ID
 
 export function Navbar() {
   const [isContactOpen, setIsContactOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: ""
   })
   const { toast } = useToast()
@@ -30,9 +35,9 @@ export function Navbar() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
-    // Simple validation
-    if (!formData.name || !formData.email || !formData.message) {
+
+    // Validação
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
         title: "Erro",
         description: "Por favor, preencha todos os campos.",
@@ -41,17 +46,42 @@ export function Navbar() {
       return
     }
 
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Retornarei em breve!",
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      toast({
+        title: "Erro",
+        description: "Por favor, insira um email válido.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    emailjs.send(
+      serviceId,
+      templateId,
+      {
+        name: formData.name,
+        email: formData.email,
+        title: formData.subject,
+        message: formData.message,
+        time: new Date().toLocaleString("pt-BR")
+      },
+      publicKey
+    )
+    .then(() => {
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Obrigado pelo contato. Retornarei em breve!",
+      })
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      setIsContactOpen(false)
     })
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
-    setIsContactOpen(false)
+    .catch(() => {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente mais tarde.",
+        variant: "destructive",
+      })
+    })
   }
 
   return (
@@ -77,7 +107,7 @@ export function Navbar() {
                 Contato
               </Button>
             </DialogTrigger>
-            
+
             <DialogContent className="sm:max-w-[425px] bg-gradient-card border-border">
               <DialogHeader>
                 <DialogTitle className="text-foreground">Entre em Contato</DialogTitle>
@@ -85,7 +115,7 @@ export function Navbar() {
                   Envie uma mensagem e entrarei em contato o mais breve possível.
                 </DialogDescription>
               </DialogHeader>
-              
+
               <form onSubmit={handleSubmit} className="space-y-4 mt-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
@@ -97,10 +127,10 @@ export function Navbar() {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Seu nome completo"
-                    className="bg-secondary/50 border-border focus:border-primary"
+                    required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-foreground">
                     Email
@@ -112,10 +142,24 @@ export function Navbar() {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="seu.email@exemplo.com"
-                    className="bg-secondary/50 border-border focus:border-primary"
+                    required
                   />
                 </div>
-                
+
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-foreground">
+                    Assunto
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="Sobre o que você gostaria de conversar?"
+                    required
+                  />
+                </div>
+
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-foreground">
                     Mensagem
@@ -126,25 +170,16 @@ export function Navbar() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Descreva como posso ajudá-lo..."
-                    className="bg-secondary/50 border-border focus:border-primary min-h-[100px] resize-none"
+                    required
                   />
                 </div>
-                
+
                 <div className="flex justify-end gap-3 pt-4">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={() => setIsContactOpen(false)}
-                    className="border-border hover:bg-secondary/50"
-                  >
+                  <Button type="button" variant="outline" onClick={() => setIsContactOpen(false)}>
                     Cancelar
                   </Button>
-                  <Button
-                    type="submit"
-                    className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    Enviar
+                  <Button type="submit" className="bg-gradient-primary text-primary-foreground">
+                    <Send className="mr-2 h-4 w-4" /> Enviar
                   </Button>
                 </div>
               </form>
