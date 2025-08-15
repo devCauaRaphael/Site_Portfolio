@@ -1,40 +1,27 @@
-<h1>Meu Portfólio Pessoal 🌐</h1>
-<p>
-  Este repositório contém o código-fonte do meu site profissional, criado para mostrar de maneira simplificada o que um Desenvolvedor Fullstack faz.  
-  O site pode ser acessado em diferentes plataformas, como desktop e mobile.  
-  <a href="https://devcauaraphael.github.io/Site_Portfolio/" target="_blank">Clique para conhecer</a>.
-</p>
+## 👨🏾‍💻 Portfólio Pessoal
 
-<h2>🛠️ Tecnologias Utilizadas</h2>
-<ul>
-  <li><b>HTML:</b> Estrutura e conteúdo do site.</li>
-  <li><b>SASS:</b> Estilização visual e responsividade.</li>
-  <li><b>Bootstrap:</b> Framework para facilitar o design responsivo e componentes reutilizáveis.</li>
-</ul>
+Este é o meu **Portfólio Pessoal** desenvolvido com **React, TailwindCSS, TypeScript e Vite**.  
+O projeto foi criado com o objetivo de **apresentar meus estudos, projetos e habilidades técnicas**, aplicando boas práticas de desenvolvimento front-end moderno e técnicas de deploy.
 
-<h2>📁 Estrutura do Projeto</h2>
-<pre>
-├── index.html  # Página principal
-├── files/      # Arquivos adicionais (PDFs, documentos)
-├── img/        # Imagens do site
-└── style/
-    └── style.scss  # Estilos personalizados
-</pre>
+---
 
-<h2>🌟 Objetivo</h2>
-<p>O site foi idealizado para:</p>
-<ul>
-  <li>Facilitar a apresentação das minhas habilidades.</li>
-  <li>Demonstrar como posso contribuir de forma prática e eficiente como um Desenvolvedor Fullstack.</li>
-  <li>Focar em uma comunicação clara e acessível, em vez de detalhes técnicos.</li>
-</ul>
+## 💻 Tecnologias Utilizadas
 
-<h2>🚀 Como Visualizar</h2>
-<ol>
-  <li>Clone este repositório:
-    <pre>
-      git clone https://github.com/seu-usuario/seu-repositorio.git
-    </pre>
-  </li>
-  <li>Abra o arquivo <code>index.html</code> em qualquer navegador.</li>
-</ol>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)  
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)  
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+---
+
+## 🔧 Próximas Melhorias
+
+- Melhorar o tempo de emissão de e-mails; 
+- Integrar com o back-end;
+- Refatorar;
+- Respeitar as boas práticas do react 
+---
+
+## 🌐 Acessar Portfólio
+
+[👉 Clique aqui para acessar meu portfólio](https://devcauaraphael.github.io/Site_Portfolio/)
