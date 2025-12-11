@@ -15,7 +15,6 @@ const Projetos = () => {
       category: "Backend",
       icon: Server,
       github: "https://github.com/devCauaRaphael/API_Node-MongoDB.git",
-      demo: "https://demo.com",
       highlights: ["Restful", "Compose", "CRUD"]
     },
     {
@@ -25,7 +24,6 @@ const Projetos = () => {
       category: "TCM",
       icon: Database,
       github: "https://github.com/orgs/TCC-ETEC-01/repositories",
-      demo: "https://demo.com",
       highlights: ["MVC", "Leadership", "Modelo conceitual", "Documentação", "Organização"]
     },
     {
@@ -35,7 +33,6 @@ const Projetos = () => {
       category: "TCM",
       icon: Zap,
       github: "https://github.com/devCauaRaphael/TCM",
-      demo: "https://demo.com",
       highlights: ["Responsividade", "JQuery", "Orientação a Objetos"]
     }
   ]
@@ -48,7 +45,6 @@ const Projetos = () => {
       category: "Pessoal",
       icon: Server,
       github: "https://github.com/devCauaRaphael/Commodities",
-      demo: null,
       highlights: ["Consumo de API", "Rotas", "Segurança"]
     }
   ]
@@ -63,7 +59,6 @@ const Projetos = () => {
       category: "TCC",
       icon: Zap,
       github: "https://github.com/LoopstackTechSolutions",
-      demo: null,
       highlights: ["Scrum", "Consumo de API", "Trabalho em Equipe", "Backend"]
     }
   ]
@@ -143,18 +138,6 @@ const Projetos = () => {
             </a>
           </Button>
           
-          {project.demo && (
-            <Button
-              size="sm"
-              className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
-              asChild
-            >
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Demo
-              </a>
-            </Button>
-          )}
         </div>
       </CardContent>
     </Card>
