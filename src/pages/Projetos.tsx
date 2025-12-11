@@ -34,33 +34,43 @@ const Projetos = () => {
       icon: Zap,
       github: "https://github.com/devCauaRaphael/TCM",
       highlights: ["Responsividade", "JQuery", "Orientação a Objetos"]
+    },
+    {
+     title: "E-commerce - Trabalho de conclusão de curso",
+      description: "Marketplace inspirado no Mercado Livre",
+      technologies: ["React", "C#", "ViaCep API", "ASP.NET", "MySQL", "Dart", "Flutter/React Native", "Trello"],
+      category: "TCC",
+      icon: Zap,
+      github: "https://github.com/devCauaRaphael/SelectaAPI",
+      highlights: ["Scrum", "Consumo de API", "Trabalho em Equipe", "Backend", "AWS"]
+    },
+    {
+      title: "CRUD com PHP",
+      description: "CRUD desenvolvido com o intuito de aprendizado em PHP, XAMPP e reforço de lógica",
+      technologies: ["PHP", "MySQL", "XAMPP", "Git", "Github"],
+      category: "Backend",
+      icon: Server,
+      github: "https://github.com/devCauaRaphael/CrudPhp",
+      highlights: ["PHP", "Servidor", "CRUD"]
     }
   ]
 
   const inProgressProjects = [
     {
-      title: "Commodities",
-      description: "Consumo de uma API externa para o desenvolvimento de um projeto completo envolvendo vendas, trocas e buscas.",
-      technologies: [".NET", "Ninjas API", "Docker", "Compose", "C#", "ASP.NET", "Postman"],
+      title: "SOS-Automotivo",
+      description: "Blog para profissionais da área de mecânica interagir com seus clientes. Além disso, possuí funcionalidades como socorro automotivo, gestão financeira, ERP e CRM",
+      technologies: [".NET", "WEB", "Docker", "Compose", "C#", "ASP.NET", "Swagger", "MongoDB", "MySQL", "AWS"],
       category: "Pessoal",
       icon: Server,
-      github: "https://github.com/devCauaRaphael/Commodities",
-      highlights: ["Consumo de API", "Rotas", "Segurança"]
+      github: "https://github.com/orgs/SOS-Automotivo/repositories",
+      highlights: ["MVC", "Rotas", "ChatBot"]
     }
   ]
 
   const currentInProgress = inProgressProjects[0]
 
   const upcomingProjects = [
-    {
-      title: "E-commerce - Trabalho de conclusão de módulo",
-      description: "Marketplace inspirado no Mercado Livre",
-      technologies: ["Bootstrap", "C#", "ViaCep API", "ASP.NET", "MySQL", "Dart", "Flutter/React Native", "Trello"],
-      category: "TCC",
-      icon: Zap,
-      github: "https://github.com/LoopstackTechSolutions",
-      highlights: ["Scrum", "Consumo de API", "Trabalho em Equipe", "Backend"]
-    }
+
   ]
 
   const getCategoryColor = (category: string) => {
