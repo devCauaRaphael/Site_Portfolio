@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import imagemProfile from "@/assets/image/imagemProfi.jpg"
-import curriculo from "@/assets/pdf/CauaCurriculoDev.pdf"
+import curriculo from "@/assets/pdf/Cauã Raphael de Souza Santana - Desenvolvedor.pdf"
 import empresaInfra from "@/assets/image/images.png"
 
 const Sobre = () => {
@@ -64,7 +64,7 @@ const Sobre = () => {
             onClick={() => {
               const link = document.createElement('a');
               link.href = curriculo; 
-              link.download = 'Curriculo-FullStack-Developer.pdf';
+              link.download = 'Cauã Raphael de Souza Santana - Desenvolvedor.pdf';
               link.click();
             }}
           >
