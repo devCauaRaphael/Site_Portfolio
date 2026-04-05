@@ -33,7 +33,6 @@ const navigationItems = [
 const socialItems = [
   { title: "GitHub", url: "https://github.com/devCauaRaphael", icon: Github, external: true },
   { title: "LinkedIn", url: "https://www.linkedin.com/in/devcauaraphael", icon: Linkedin, external: true },
-  { title: "Instagram", url: "https://www.instagram.com/cauawlrd?igsh=MWR2OG9tNDRwa2swYg==", icon: Instagram, external: true },
   { title: "WhatsApp", url: "https://wa.link/q3n4uz", icon: MessageCircle, external: true },
   { title: "TikTok", url: "https://www.tiktok.com/@dev.caua?_t=ZM-8yeZHtil9C4&_r=1", icon: Music, external: true },
 ]

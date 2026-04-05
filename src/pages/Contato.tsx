@@ -114,13 +114,7 @@ const Contato = () => {
       href: "https://www.linkedin.com/in/devcauaraphael",
       description: "Conecte-se comigo profissionalmente"
     },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      username: "@cauawlrd",
-      href: "https://www.instagram.com/cauawlrd?igsh=MWR2OG9tNDRwa2swYg%3D%3D",
-      description: "Acompanhe minha jornada e projetos pessoais"
-    }
+
   ]
 
   return (
