@@ -4,14 +4,25 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import imagemProfile from "@/assets/image/imagemProfi.jpg"
 import curriculo from "@/assets/pdf/CauaCurriculoDev.pdf"
+import empresaInfra from "@/assets/image/images.png"
 
 const Sobre = () => {
   const experience = [
     {
       title: "Desenvolvedor Autônomo Full-Stack",
-      period: "2024 - Presente",
+      company: "Freelancer",
+      companyImage: null, 
+      period: "2025 - Presente",
       description: "Transformo ideias em soluções digitais completas, desde interfaces modernas até APIs robustas.",
       technologies: ["Node.js", "PostgreSQL", "Docker", "AWS", "GCP", "Azure", "React", "MongoDB", "MySQL", "C#", ".NET", "GraphQL", "Restful", "Github", "TypeScript"]
+    },
+    {
+      title: "Desenvolvedor de Automações para infraestrutura",
+      company: "Nokia",
+      companyImage: empresaInfra,
+      period: "2026 - Presente",
+      description: "Desenvolvo ferramentas que colaboram para o aumento da eficiência da equipe de engenharia de redes móveis",
+      technologies: ["Python", "ClickHouse", "Docker", "AWS", "Pandas", "Kubernetes", "CI/CD", "DevOps"],
     }
   ]
 
@@ -24,26 +35,29 @@ const Sobre = () => {
 
   return (
     <div className="container mx-auto px-6 py-8 max-w-6xl">
+      
       {/* Header */}
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
           Sobre Mim
         </h1>
-        {/* Profile Photo Container */}
-      <div className="mb-6 flex justify-center">
-        <div className="w-48 h-48 rounded-full bg-gradient-card border-2 border-primary/20 justify-center overflow-hidden">
-       <img
-         src={imagemProfile}
-          alt="Foto de perfil"
-          className="w-full h-full rounded-full object-cover object-top"
-      />
-      </div>
-    </div>
-        
+
+        {/* Foto */}
+        <div className="mb-6 flex justify-center">
+          <div className="w-48 h-48 rounded-full bg-gradient-card border-2 border-primary/20 overflow-hidden">
+            <img
+              src={imagemProfile}
+              alt="Foto de perfil"
+              className="w-full h-full rounded-full object-cover object-top"
+            />
+          </div>
+        </div>
+
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atualmente curso Desenvolvimento de Sistemas na ETEC, com foco em web e backend. Sou apaixonado por tecnologia e adoro enfrentar desafios, sempre buscando aprender e crescer na área. Fora da programação, curto futebol, música e a cultura urbana que me inspiram no dia a dia.        </p>
-        
-        {/* Download CV Button */}
+          Tenho 18 anos e sou desenvolvedor com mais de 1 ano de experiência. Atualmente curso Ciência da Computação na Anhembi Morumbi. Sou apaixonado por tecnologia e adoro enfrentar desafios, sempre buscando aprender e crescer na área. Fora da programação, curto futebol, música e a cultura urbana que me inspiram no dia a dia.
+        </p>
+
+        {/* Botão CV */}
         <div className="mt-6">
           <Button 
             className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
@@ -59,8 +73,10 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
         </div>
       </div>
 
+      {/* Info + Skills */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Personal Info */}
+        
+        {/* Info */}
         <Card className="bg-gradient-card border-border">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
@@ -68,27 +84,26 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
               Informações Pessoais
             </CardTitle>
           </CardHeader>
+
           <CardContent className="space-y-4">
             <div className="flex items-center gap-3">
               <Calendar className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Nascimento:</span>
               <span className="text-foreground">19/06/2007</span>
             </div>
+
             <div className="flex items-center gap-3">
               <MapPin className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Localização:</span>
               <span className="text-foreground">São Paulo, SP</span>
             </div>
+
             <div className="flex items-center gap-3">
               <Code className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">Experiência:</span>
               <span className="text-foreground">1+ ano</span>
             </div>
-            <div className="flex items-center gap-3">
-              <Trophy className="h-4 w-4 text-muted-foreground" />
-              <span className="text-muted-foreground">Foco:</span>
-              <span className="text-foreground">Full-Stack Development</span>
-            </div>
+
           </CardContent>
         </Card>
 
@@ -100,6 +115,7 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
               Principais tecnologias que domino
             </CardDescription>
           </CardHeader>
+
           <CardContent>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
@@ -116,29 +132,62 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
         </Card>
       </div>
 
-      {/* Experience */}
+      {/* Experiência */}
       <div className="mt-12">
         <h2 className="text-3xl font-bold mb-8 text-foreground">
           Experiência Profissional
         </h2>
-        
+
         <div className="space-y-6">
           {experience.map((exp, index) => (
             <Card key={index} className="bg-gradient-card border-border hover:shadow-card transition-all duration-300">
+              
               <CardHeader>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <div>
-                    <CardTitle className="text-foreground">{exp.title}</CardTitle>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  
+                  {/* EMPRESA + LOGO */}
+                  <div className="flex items-center gap-4">
+                    
+                    {/* LOGO DINÂMICA */}
+                    <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-primary/20 bg-muted overflow-hidden">
+                      {exp.companyImage ? (
+                        <img
+                          src={exp.companyImage}
+                          alt={exp.company}
+                          className="max-w-full max-h-full object-contain p-1"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5">
+                          <span className="text-primary font-bold text-lg">
+                            {exp.company?.charAt(0)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">
+                        {exp.company}
+                      </h3>
+
+                      <CardTitle className="text-foreground text-xl">
+                        {exp.title}
+                      </CardTitle>
+                    </div>
                   </div>
+
                   <Badge variant="outline" className="self-start border-primary/30 text-primary">
                     {exp.period}
                   </Badge>
+
                 </div>
               </CardHeader>
+
               <CardContent>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {exp.description}
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIndex) => (
                     <Badge 
@@ -151,12 +200,13 @@ Tenho 18 anos e estou há cerca de um ano estudando programação fullstack. Atu
                   ))}
                 </div>
               </CardContent>
+
             </Card>
           ))}
         </div>
       </div>
 
-      {/* Mission Statement */}
+      {/* Missão */}
       <Card className="mt-12 bg-gradient-primary border-0 text-primary-foreground">
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Minha Missão</h3>
