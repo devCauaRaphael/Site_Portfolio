@@ -18,7 +18,18 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+				sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+			},
 			colors: {
+				ink: '#07100c',
+				surface: '#0d1813',
+				line: '#1c2b24',
+				text: '#d4e4da',
+				dim: '#7f968a',
+				signal: '#00ff9c',
+				amber: '#ffb547',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

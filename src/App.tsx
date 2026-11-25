@@ -1,39 +1,28 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Layout } from "@/components/layout/Layout";
-import Index from "./pages/Index";
-import Sobre from "./pages/Sobre";
-import Projetos from "./pages/Projetos";
-import Formacoes from "./pages/Certificados";
-import Leituras from "./pages/Leituras";
-import Contato from "./pages/Contato";
-import NotFound from "./pages/NotFound";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster"
+import { StatusBar } from "@/components/onepage/StatusBar"
+import { Hero, About, Nokia, Arsenal, Projects, Education, Reading } from "@/components/onepage/Sections"
+import { Contact, Footer } from "@/components/onepage/Contact"
 
-const queryClient = new QueryClient();
-
+// One page: todas as seções em sequência, navegadas pela barra de status fixa.
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-     <HashRouter>
-  <Layout>
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/sobre" element={<Sobre />} />
-      <Route path="/projetos" element={<Projetos />} />
-      <Route path="/certificados" element={<Formacoes />} />
-      <Route path="/leituras" element={<Leituras />} />
-      <Route path="/contato" element={<Contato />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </Layout>
-</HashRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+  <>
+    <a href="#whoami" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-signal focus:px-3 focus:py-2 focus:font-mono focus:text-ink">
+      Pular para o conteúdo
+    </a>
+    <main className="pb-9">
+      <Hero />
+      <About />
+      <Nokia />
+      <Arsenal />
+      <Projects />
+      <Education />
+      <Reading />
+      <Contact />
+      <Footer />
+    </main>
+    <StatusBar />
+    <Toaster />
+  </>
+)
 
-export default App;
+export default App
