@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react"
 import { links } from "@/data/content"
-import cvUrl from "@/assets/pdf/Cauã Raphael de Souza Santana - Desenvolvedor.pdf"
+import cvUrl from "@/assets/pdf/Caua_Raphael_Curriculo_DevOps_Seguranca.pdf"
 
 type Line = { kind: "in" | "out" | "ok" | "err"; text: string }
 

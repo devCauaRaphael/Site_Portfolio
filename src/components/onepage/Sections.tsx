@@ -1,7 +1,7 @@
 import { Github, Linkedin, Download, ArrowUpRight } from "lucide-react"
 import { Terminal } from "./Terminal"
 import { about, nokia, promocao, freelance, arsenal, projects, education, reading, links, type Project } from "@/data/content"
-import cvUrl from "@/assets/pdf/Cauã Raphael de Souza Santana - Desenvolvedor.pdf"
+import cvUrl from "@/assets/pdf/Caua_Raphael_Curriculo_DevOps_Seguranca.pdf"
 
 function Head({ path, cmd, title }: { path: string; cmd: string; title: string }) {
   return (
